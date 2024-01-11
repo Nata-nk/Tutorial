@@ -1,13 +1,8 @@
-function calculateTotalPrice(order) {
-  let totalPrice = 0; 
-  for (const total of order) {
-     totalPrice += total;
-}
-   return totalPrice;
-}
+const first = { propA: 5, propB: 10, propC: 50 };
+const second = { propC: 15, propD: 20 };
 
+const third = { ...first, ...second };
+console.log(third); // { propA: 5, propB: 10, propC: 15, propD: 20 }
 
-console.log(calculateTotalPrice([12, 85, 37, 4]))
-console.log(calculateTotalPrice([164, 48, 291]))
-console.log(calculateTotalPrice([]))
-console.log(calculateTotalPrice([412, 371, 94, 63, 176]))
+const fourth = { ...second, ...first };
+console.log(fourth); // { propA: 5, propB: 10, propC: 50, propD: 20 }
